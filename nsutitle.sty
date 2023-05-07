@@ -14,7 +14,7 @@
 \newcommand*{\nsutitleDirectionValue}{???}
 
 \newcommand*{\nsutitleStage}[1]{\gdef\nsutitleStageValue{#1}}
-\newcommand*{\nsutitleStageValue}{???}
+\newcommand*{\nsutitleStageValue}{Бакалавриат}
 
 \newcommand*{\nsutitleAuthor}[1]{\gdef\nsutitleAuthorValue{#1}}
 \newcommand*{\nsutitleAuthorValue}{???}
@@ -42,7 +42,12 @@
 
 \newcommand\nsutitlestageline{}
 
-\DeclareOption{master}{\renewcommand\nsutitlestageline{Магистерская программа \titlebf{\nsutitleMasterProgramValue}}}
+\DeclareOption{master}{%
+    \renewcommand\nsutitlestageline{%
+        Магистерская программа \titlebf{\nsutitleMasterProgramValue}%
+    }%
+    \nsutitleStage{Магистратура}%
+}
 \DeclareOption*{\PackageWarning{examplepackage}{Unknown ‘\CurrentOption’}}
 \ProcessOptions\relax
 
