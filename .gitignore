@@ -1,0 +1,9 @@
+# TeXstudio sessions
+*.txss2
+# XeLaTeX output
+*.aux
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.toc

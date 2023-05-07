@@ -1,0 +1,146 @@
+\ProvidesPackage{nsutitle}[2023/05/07 maketitle for NSU article]
+
+\newcommand*{\nsutitleDepartment}[1]{\gdef\nsutitleDepartmentValue{#1}}
+\newcommand*{\nsutitleDepartmentValue}{???}
+
+\newcommand*{\nsutitleChair}[1]{\gdef\nsutitleChairValue{#1}}
+\newcommand*{\nsutitleChairValue}{???}
+
+\newcommand*{\nsutitleDirection}[1]{\gdef\nsutitleDirectionValue{#1}}
+\newcommand*{\nsutitleDirectionValue}{???}
+
+\newcommand*{\nsutitleStage}[1]{\gdef\nsutitleStageValue{#1}}
+\newcommand*{\nsutitleStageValue}{???}
+
+\newcommand*{\nsutitleAuthor}[1]{\gdef\nsutitleAuthorValue{#1}}
+\newcommand*{\nsutitleAuthorValue}{???}
+
+\newcommand*{\nsutitleTitle}[1]{\gdef\nsutitleTitleValue{#1}}
+\newcommand*{\nsutitleTitleValue}{???}
+
+\newcommand*{\nsutitleCHTitles}[1]{\gdef\nsutitleCHTitlesValue{#1}}
+\newcommand*{\nsutitleCHTitlesValue}{???}
+
+\newcommand*{\nsutitleCHPost}[1]{\gdef\nsutitleCHPostValue{#1}}
+\newcommand*{\nsutitleCHPostValue}{???}
+
+\newcommand*{\nsutitleCHName}[1]{\gdef\nsutitleCHNameValue{#1}}
+\newcommand*{\nsutitleCHNameValue}{???}
+
+\newcommand*{\nsutitleSATitles}[1]{\gdef\nsutitleSATitlesValue{#1}}
+\newcommand*{\nsutitleSATitlesValue}{???}
+
+\newcommand*{\nsutitleSAPost}[1]{\gdef\nsutitleSAPostValue{#1}}
+\newcommand*{\nsutitleSAPostValue}{???}
+
+\newcommand*{\nsutitleSAName}[1]{\gdef\nsutitleSANameValue{#1}}
+\newcommand*{\nsutitleSANameValue}{???}
+
+\newcommand\titlebf[1]{\uline{\textbf{\uppercase\expandafter{#1}}}}
+\newcommand\titlesignature[1]{$\underset{\text{(фамилия И., О.) / (подпись, МП)}}{\text{\dotuline{#1}/\dotuline{\hspace{3cm}}}}$}
+\newcommand\titledate{\enquote{\dotuline{\hspace{6mm}}}\dotuline{\hspace{3cm}}2023~г.}
+
+\renewcommand*{\maketitle}{%
+    \thispagestyle{empty}
+    \fontspec[Kerning=Off]{Times New Roman}
+    \fontsize{11pt}{11pt}\selectfont
+    \setlength\parindent{0cm}
+    \setlength\parskip{0pt}
+    \setlength\topsep{0pt}
+
+    \begin{center}
+        {\fontsize{13pt}{13pt}\selectfont~\\}
+        \uppercase{Министерство науки и высшего образования Российской Федерации}\\
+        \vspace{0.35cm}
+    
+        \uppercase{Федеральное государственное автономное образовательное}\\
+        \uppercase{учреждение высшего образования}\\
+        \vspace{0.21cm}
+    
+        \uppercase{\enquote{Новосибирский национальный исследовательский государственный университет} (Новосибирский государственный университет, НГУ)}
+        \vspace{0.35cm}
+    \end{center}
+
+    Факультет \titlebf{\nsutitleDepartmentValue}
+    \setlength\parskip{0.35cm}
+
+    Кафедра \titlebf{\nsutitleChairValue}
+
+    Магистерская программа \titlebf{информационные процессы и системы}
+    
+    ~
+    
+    Направление подготовки \titlebf{\nsutitleDirectionValue}
+    
+    Образовательная программа: \titlebf{\nsutitleStageValue}
+    
+    ~
+    
+    \begin{center}
+        \textbf{\uppercase{Выпускная квалификационная работа}}\\
+        \textbf{({\color{red}какой-то}-исследовательский формат)}
+
+        ~
+
+        \uline{\hfill\nsutitleAuthorValue\hfill}
+
+        ~
+    \end{center}
+
+    Тема работы \uline{\nsutitleTitleValue\hfill}
+
+    \uline{\hfill}
+
+    \uline{\hfill}
+
+    ~
+
+    \begin{minipage}{0.19cm}
+    \end{minipage}
+    \begin{minipage}[b]{\dimexpr 0.5\textwidth - 0.19cm}
+        \begin{flushleft}
+            \textbf{\enquote{К защите допущена}}
+            \setlength\parskip{0.21cm}
+
+            Заведующий кафедрой
+            \setlength\parskip{0.64cm}
+
+            \nsutitleCHTitlesValue
+
+            \nsutitleCHPostValue
+            
+            \titlesignature{\nsutitleCHNameValue}
+            
+            \titledate
+        \end{flushleft}
+    \end{minipage}
+    \begin{minipage}[b]{\dimexpr 0.5\textwidth - 0.19cm}
+        \begin{flushright}
+            ~
+            \setlength\parskip{0.21cm}
+
+            \textbf{Научный руководитель}
+            \setlength\parskip{0.64cm}
+            
+            \nsutitleSATitlesValue
+            
+            \nsutitleSAPostValue
+            
+            \titlesignature{\nsutitleSANameValue}
+
+            \titledate
+        \end{flushright}
+    \end{minipage}
+    \setlength\parskip{0.64cm}
+
+    \begin{flushright}
+        Дата защиты: \titledate
+    \end{flushright}
+
+    \vfill
+
+    \begin{center}
+        Новосибирск, 2023
+    \end{center}
+    \newpage
+}
