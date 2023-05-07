@@ -54,9 +54,6 @@
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
 \titlespacing{\subsubsection}{0pt}{0pt}{0pt}
 
-% Title
-\RequirePackage{nsutitle}
-
 % Table of contents
 \RequirePackage{tocloft}
 \RequirePackage{titletoc}

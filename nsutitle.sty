@@ -1,3 +1,4 @@
+\NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{nsutitle}[2023/05/07 maketitle for NSU article]
 
 \newcommand*{\nsutitleDepartment}[1]{\gdef\nsutitleDepartmentValue{#1}}
@@ -5,6 +6,9 @@
 
 \newcommand*{\nsutitleChair}[1]{\gdef\nsutitleChairValue{#1}}
 \newcommand*{\nsutitleChairValue}{???}
+
+\newcommand*{\nsutitleMasterProgram}[1]{\gdef\nsutitleMasterProgramValue{#1}}
+\newcommand*{\nsutitleMasterProgramValue}{???}
 
 \newcommand*{\nsutitleDirection}[1]{\gdef\nsutitleDirectionValue{#1}}
 \newcommand*{\nsutitleDirectionValue}{???}
@@ -36,6 +40,12 @@
 \newcommand*{\nsutitleSAName}[1]{\gdef\nsutitleSANameValue{#1}}
 \newcommand*{\nsutitleSANameValue}{???}
 
+\newcommand\nsutitlestageline{}
+
+\DeclareOption{master}{\renewcommand\nsutitlestageline{Магистерская программа \titlebf{\nsutitleMasterProgramValue}}}
+\DeclareOption*{\PackageWarning{examplepackage}{Unknown ‘\CurrentOption’}}
+\ProcessOptions\relax
+
 \newcommand\titlebf[1]{\uline{\textbf{\uppercase\expandafter{#1}}}}
 \newcommand\titlesignature[1]{$\underset{\text{(фамилия И., О.) / (подпись, МП)}}{\text{\dotuline{#1}/\dotuline{\hspace{3cm}}}}$}
 \newcommand\titledate{\enquote{\dotuline{\hspace{6mm}}}\dotuline{\hspace{3cm}}2023~г.}
@@ -66,7 +76,7 @@
 
     Кафедра \titlebf{\nsutitleChairValue}
 
-    Магистерская программа \titlebf{информационные процессы и системы}
+    \nsutitlestageline
     
     ~
     
