@@ -56,106 +56,108 @@
 \newcommand\titledate{\enquote{\dotuline{\hspace{6mm}}}\dotuline{\hspace{3cm}}2023~г.}
 
 \renewcommand*{\maketitle}{%
-    \thispagestyle{empty}
-    \fontspec[Kerning=Off]{Times New Roman}
-    \fontsize{11pt}{11pt}\selectfont
-    \setlength\parindent{0cm}
-    \setlength\parskip{0pt}
-    \setlength\topsep{0pt}
-
-    \begin{center}
-        {\fontsize{13pt}{13pt}\selectfont~\\}
-        \uppercase{Министерство науки и высшего образования Российской Федерации}\\
-        \vspace{0.35cm}
+    {
+        \thispagestyle{empty}
+        \fontspec[Kerning=Off]{Times New Roman}
+        \fontsize{11pt}{11pt}\selectfont
+        \setlength\parindent{0cm}
+        \setlength\parskip{0pt}
+        \setlength\topsep{0pt}
     
-        \uppercase{Федеральное государственное автономное образовательное}\\
-        \uppercase{учреждение высшего образования}\\
-        \vspace{0.21cm}
+        \begin{center}
+            {\fontsize{13pt}{13pt}\selectfont~\\}
+            \uppercase{Министерство науки и высшего образования Российской Федерации}\\
+            \vspace{0.35cm}
+        
+            \uppercase{Федеральное государственное автономное образовательное}\\
+            \uppercase{учреждение высшего образования}\\
+            \vspace{0.21cm}
+        
+            \uppercase{\enquote{Новосибирский национальный исследовательский государственный университет} (Новосибирский государственный университет, НГУ)}
+            \vspace{0.35cm}
+        \end{center}
     
-        \uppercase{\enquote{Новосибирский национальный исследовательский государственный университет} (Новосибирский государственный университет, НГУ)}
-        \vspace{0.35cm}
-    \end{center}
-
-    Факультет \titlebf{\nsutitleDepartmentValue}
-    \setlength\parskip{0.35cm}
-
-    Кафедра \titlebf{\nsutitleChairValue}
-
-    \nsutitlestageline
+        Факультет \titlebf{\nsutitleDepartmentValue}
+        \setlength\parskip{0.35cm}
     
-    ~
+        Кафедра \titlebf{\nsutitleChairValue}
     
-    Направление подготовки \titlebf{\nsutitleDirectionValue}
-    
-    Образовательная программа: \titlebf{\nsutitleStageValue}
-    
-    ~
-    
-    \begin{center}
-        \textbf{\uppercase{Выпускная квалификационная работа}}\\
-        \textbf{({\color{red}какой-то}-исследовательский формат)}
-
+        \nsutitlestageline
+        
         ~
-
-        \uline{\hfill\nsutitleAuthorValue\hfill}
-
+        
+        Направление подготовки \titlebf{\nsutitleDirectionValue}
+        
+        Образовательная программа: \titlebf{\nsutitleStageValue}
+        
         ~
-    \end{center}
-
-    Тема работы \uline{\nsutitleTitleValue\hfill}
-
-    \uline{\hfill}
-
-    \uline{\hfill}
-
-    ~
-
-    \begin{minipage}{0.19cm}
-    \end{minipage}
-    \begin{minipage}[b]{\dimexpr 0.5\textwidth - 0.19cm}
-        \begin{flushleft}
-            \textbf{\enquote{К защите допущена}}
-            \setlength\parskip{0.21cm}
-
-            Заведующий кафедрой
-            \setlength\parskip{0.64cm}
-
-            \nsutitleCHTitlesValue
-
-            \nsutitleCHPostValue
-            
-            \titlesignature{\nsutitleCHNameValue}
-            
-            \titledate
-        \end{flushleft}
-    \end{minipage}
-    \begin{minipage}[b]{\dimexpr 0.5\textwidth - 0.19cm}
-        \begin{flushright}
+        
+        \begin{center}
+            \textbf{\uppercase{Выпускная квалификационная работа}}\\
+            \textbf{({\color{red}какой-то}-исследовательский формат)}
+    
             ~
-            \setlength\parskip{0.21cm}
-
-            \textbf{Научный руководитель}
-            \setlength\parskip{0.64cm}
-            
-            \nsutitleSATitlesValue
-            
-            \nsutitleSAPostValue
-            
-            \titlesignature{\nsutitleSANameValue}
-
-            \titledate
+    
+            \uline{\hfill\nsutitleAuthorValue\hfill}
+    
+            ~
+        \end{center}
+    
+        Тема работы \uline{\nsutitleTitleValue\hfill}
+    
+        \uline{\hfill}
+    
+        \uline{\hfill}
+    
+        ~
+    
+        \begin{minipage}{0.19cm}
+        \end{minipage}
+        \begin{minipage}[b]{\dimexpr 0.5\textwidth - 0.19cm}
+            \begin{flushleft}
+                \textbf{\enquote{К защите допущена}}
+                \setlength\parskip{0.21cm}
+    
+                Заведующий кафедрой
+                \setlength\parskip{0.64cm}
+    
+                \nsutitleCHTitlesValue
+    
+                \nsutitleCHPostValue
+                
+                \titlesignature{\nsutitleCHNameValue}
+                
+                \titledate
+            \end{flushleft}
+        \end{minipage}
+        \begin{minipage}[b]{\dimexpr 0.5\textwidth - 0.19cm}
+            \begin{flushright}
+                ~
+                \setlength\parskip{0.21cm}
+    
+                \textbf{Научный руководитель}
+                \setlength\parskip{0.64cm}
+                
+                \nsutitleSATitlesValue
+                
+                \nsutitleSAPostValue
+                
+                \titlesignature{\nsutitleSANameValue}
+    
+                \titledate
+            \end{flushright}
+        \end{minipage}
+        \setlength\parskip{0.64cm}
+    
+        \begin{flushright}
+            Дата защиты: \titledate
         \end{flushright}
-    \end{minipage}
-    \setlength\parskip{0.64cm}
-
-    \begin{flushright}
-        Дата защиты: \titledate
-    \end{flushright}
-
-    \vfill
-
-    \begin{center}
-        Новосибирск, 2023
-    \end{center}
-    \newpage
+    
+        \vfill
+    
+        \begin{center}
+            Новосибирск, 2023
+        \end{center}
+        \newpage
+    }
 }

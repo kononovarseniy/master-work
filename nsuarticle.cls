@@ -89,6 +89,11 @@
 \RequirePackage{booktabs} % Tables
 \RequirePackage{siunitx}  % Numbers and units
 \input{siunitx.tex}
+% Lists
+\RequirePackage{enumitem}
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+\renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}
 
 \RequirePackage{float}
 \RequirePackage{placeins} % \FloatBarrier
@@ -98,7 +103,6 @@
 \RequirePackage{tikz}     % Package to create graphic elements
 % \RequirePackage{svg}      % Package to insert SVG images
 \RequirePackage[colorlinks=false, linkcolor=Maroon, citecolor=ForestGreen]{hyperref} % References
-\RequirePackage{enumitem}
 \RequirePackage[subfolder, siunitx]{gnuplottex}
 \RequirePackage{listings}
 \RequirePackage{pdfpages}
