@@ -7,3 +7,6 @@
 *.pdf
 *.synctex.gz
 *.toc
+
+.venv/
+.vscode/
