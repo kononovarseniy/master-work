@@ -1,0 +1,72 @@
+% !TeX root = main.tex
+% !TeX program = xelatex
+
+{
+    % Да сортировки не хватает,
+    % но просто написать список вручную значительно удобнее
+    % чем пытаться настроить кривые пакеты.
+    \newcommand\bibitemsite[4]{%
+        \bibitem{#1} #2 : сайт. "--- URL: #3 (дата обращения: #4). "--- Текст : электронный.
+    }
+
+    \patchcmd{\thebibliography}{\section*}{\section}{}{}
+    % https://www.reddit.com/r/LaTeX/comments/gop0rg/the_symbol_with_newcommand
+    \makeatletter
+    \renewcommand*{\@biblabel}[1]{#1.}
+    \makeatother
+    \begin{thebibliography}{9}
+        \bibitemsite{epics}
+        {\EN{EPICS - Experimental Physics and Industrial Control System}}
+        {https://epics.anl.gov/}
+        {09.05.2023}
+        
+        %https://conferences.iaea.org/event/244/contributions/19766/contribution.pdf
+        %https://www.researchgate.net/publication/224130754\_Assessment\_of\_Precise\_Time\_Protocol\_in\_a\_Prototype\_System\_for\_the\_ITER\_Neutral\_Beam\_Test\_Facility
+        %https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10017353
+        \bibitem{iterptp}
+        Trevisan L. et al. Assessment of IEEE 1588-based Timing System of the ITER Neutral Beam Test Facility. "--- 2023.
+        
+        \bibitem{rfc5905} Mills D., Burbank J., Kasch W. RFC 5905: Network time protocol version 4: Protocol and algorithms specification. "--- 2010.
+
+        \bibitem{ieee1588} IEEE Std 1588-2019.
+
+        \bibitemsite{ntpfaq}
+        {\EN{The NTP FAQ and HOWTO}}
+        {http://www.ntp.org/ntpfaq/}
+        {09.05.2023}
+        
+        \bibitemsite{planetswitch}
+        {\EN{IGSW-24040T - Rack-mount Managed Ethernet Switch - PLANET Technology}}
+        {https://www.planet.com.tw/en/product/igsw-24040t-v4}
+        {09.05.2023}
+        
+        \bibitem{ptphowbig}
+        Ciarleglio N., Edwards T., Welch R. Large scale PTP: How big can it get? //SMPTE 2016 Annual Technical Conference and Exhibition. "--- SMPTE, 2016. "--- С. 1-13.
+
+        \bibitemsite{ptpd}
+        {\EN{ptpd/ptpd: PTPd official source - master branch a.k.a. trunk}}
+        {https://github.com/ptpd/ptpd}
+        {09.05.2023}
+        
+        \bibitemsite{ptp4l}
+        {The Linux PTP Project}
+        {https://linuxptp.sourceforge.net/}
+        {09.05.2023}
+        
+        \bibitemsite{nxpptptimeout1}
+        {\EN{ptp4l tx timestamp timeout - NXP Communit}}
+        {https://community.nxp.com/t5/QorIQ/ptp4l-tx-timestamp-timeout/m-p/892488}
+        {09.05.2023}
+        
+        \bibitemsite{nxpptptimeout2}
+        {\EN{ptp  increasing tx\_timestamp\_timeout - NXP Community}}
+        {https://community.nxp.com/t5/QorIQ/ptp-increasing-tx-timestamp-timeout/td-p/1368105}
+        {09.05.2023}
+
+        \bibitemsite{nxpptptimeout3}
+        {\EN{[Linuxptp-users] poll tx timestamp timeout}}
+        {https://linuxptp-users.narkive.com/W7lNh65D/poll-tx-timestamp-timeout}
+        {09.05.2023}
+
+    \end{thebibliography}
+}
