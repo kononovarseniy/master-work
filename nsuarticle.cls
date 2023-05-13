@@ -71,11 +71,11 @@
 }
 
 % Table and figure captions
-\RequirePackage[labelsep=period, font=small, skip=10pt]{caption}
+\RequirePackage[labelsep=period, font={normalsize, stretch=1.429}, skip=10pt]{caption}
 \RequirePackage[hypcap]{subcaption} % Figure subcaptions
 \captionsetup[figure]{belowskip=0pt}
 \captionsetup[subfigure]{labelformat=empty, belowskip=0pt}
-\captionsetup[table]{font=small, skip=0pt, belowskip=0pt}
+\captionsetup[table]{font={normalsize, stretch=1.429}, skip=0pt, belowskip=0pt}
 
 % Formulas
 \RequirePackage{amsmath}  % Math formulas
