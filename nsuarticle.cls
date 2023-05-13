@@ -19,7 +19,7 @@
 \RequirePackage{polyglossia}
 \setmainlanguage[babelshorthands=true]{russian}
 \setotherlanguage{english}
-\usepackage[strict=false,autostyle=true,english=american]{csquotes}
+\RequirePackage[strict=false,autostyle=true,english=american]{csquotes}
 
 \newcommand{\EN}[1]{\foreignlanguage{english}{#1}}
 
