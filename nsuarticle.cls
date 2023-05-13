@@ -97,6 +97,8 @@
 \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
 \renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
 \renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}
+\setlist[itemize]{nosep}
+\setlist[enumerate]{nosep}
 
 \RequirePackage{float}
 \RequirePackage{placeins} % \FloatBarrier
