@@ -31,7 +31,10 @@
 \setlength{\intextsep}{10pt} % Skip before AND after 'here' floats
 
 \RequirePackage{setspace} % Line Spacing
-\onehalfspacing % Other options: \singlespacing, \doublespacing and \setstretch{1.1}
+% Для шрифта 14 pt экспериментально был подобран множитель для получения полуторного интервала.
+% Другие значения не работают для extarticle: \onehalfspacing \singlespacing, \doublespacing
+\setstretch{1.429}
+
 \RequirePackage{indentfirst} % Make the first line of all sections, be indented by the usual paragraph indentation
 
 % Header/footer (page numbers)
